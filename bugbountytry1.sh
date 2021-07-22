@@ -6,6 +6,7 @@ sudo ./sudomy -d "$domain" -b -dP -eP -rS -cF -pS -tO -gW --httpx --dnsprobe  -a
 cd output;
 date_stamp=$(date +"%m-%d-%Y");
 cd "$date_stamp";
+cd "$domain";
 echo "$domain">>subdomain.txt ;
 #crawling
 cat subdomain.txt | waybackurls | tee -a waybackfile.txt ;
