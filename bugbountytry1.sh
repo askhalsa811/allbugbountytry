@@ -22,7 +22,7 @@ cat gospider403.txt>>allcrawldatafile1.txt ;
 cat gospider301.txt>>allcrawldatafile1.txt ;
 
 #body discovery
-cat allcrawldatafile1.txt | fff -d 5 -S -o bodydiscovery;
+#cat allcrawldatafile1.txt | fff -d 5 -S -o bodydiscovery;
 #status code httpx
 cat allcrawldatafile1.txt | httpx -status-code -o httpxstatus.txt ;
 cat httpxstatus.txt | grep 200 | sed 's/\[[^]]*\]//g' | anew httpxstatus200.txt ;
